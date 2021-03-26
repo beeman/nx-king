@@ -207,6 +207,56 @@
           }
         }
       }
+    },
+    "user-data-access": {
+      "projectType": "library",
+      "root": "libs/user/data-access",
+      "sourceRoot": "libs/user/data-access/src",
+      "prefix": "nx-king",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/user/data-access/src/**/*.ts",
+              "libs/user/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/user/data-access"],
+          "options": {
+            "jestConfig": "libs/user/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "company-data-access": {
+      "projectType": "library",
+      "root": "libs/company/data-access",
+      "sourceRoot": "libs/company/data-access/src",
+      "prefix": "nx-king",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/company/data-access/src/**/*.ts",
+              "libs/company/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/company/data-access"],
+          "options": {
+            "jestConfig": "libs/company/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

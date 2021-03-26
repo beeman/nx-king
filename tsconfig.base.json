@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
+    "strict": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -15,8 +16,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-king/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@nx-king/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@nx-king/user/data-access": ["libs/user/data-access/src/index.ts"],
+      "@nx-king/company/data-access": ["libs/company/data-access/src/index.ts"]
     }
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictTemplates": true
   },
   "exclude": ["node_modules", "tmp"]
 }
